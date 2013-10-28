@@ -19,7 +19,7 @@ Fork of [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/
 
 Good config of user.name and user.email in .gitconfig
 
-´´´
+```
 [user]
         name = Israel Calvete
         email = icalvete@gmail.com
@@ -35,7 +35,7 @@ Good config of user.name and user.email in .gitconfig
         st = status
         last = log -1 HEAD
         unstage = reset HEAD --
-´´´
+```
 
 ##Installation
 
