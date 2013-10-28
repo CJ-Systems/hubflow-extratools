@@ -10,7 +10,7 @@ Fork of [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/
 ##Actions
 
 1. Extend "git hf feature" with "git hf feature rstart".
-  *"git hf feature rstart" find open issues in github repo and allows you to choose one of them before call "git hf feature start" &lt;issue_number&gt;-&lt;issue_title&gt;-&lt;user&gt;º
+  *"git hf feature rstart" find open issues in github repo and allows you to choose one of them before call "git hf feature start" &lt;issue_number&gt;-&lt;issue_title&gt;-&lt;user&gt;
   *"git hf feature rstart" also assigned this issue to user
 
 2. Extend "git hf feature finish" to close related issue (ussing branch name **&lt;issue_number&gt;**-&lt;issue_title&gt;-&lt;user&gt;)
