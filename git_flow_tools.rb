@@ -81,9 +81,6 @@ repo_url = `git config --get remote.origin.url`
 repo_user = repo_url.split('/')[-2].strip
 repo_name = repo_url.split('/')[-1].gsub('.git','').strip
 
-repo_user = 'icalvete'
-repo_name = 'test'
-
 user_email = `git config --get user.email`
 user = user_email.split('@')[0]
 
