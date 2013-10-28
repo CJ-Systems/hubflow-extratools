@@ -15,6 +15,28 @@ Fork of [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/
 
 2. Extend "git hf feature finish" to close related issue (ussing branch name **&lt;issue_number&gt;**-&lt;issue_title&gt;-&lt;user&gt;)
 
+##Requires
+
+Good config of user.name and user.email in .gitconfig
+
+´´´
+[user]
+        name = Israel Calvete
+        email = icalvete@gmail.com
+[color]
+        ui = true
+[core]
+        editor = vim
+        excludesfile = ~/.gitignore
+        [alias]
+        co = checkout
+        br = branch
+        ci = commit
+        st = status
+        last = log -1 HEAD
+        unstage = reset HEAD --
+´´´
+
 ##Installation
 
 1. git clone https://github.com/icalvete/gitflow-tools.git
