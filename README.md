@@ -40,7 +40,7 @@ Good config of user.name and user.email in .gitconfig
 ##Installation
 
 1. git clone https://github.com/icalvete/hubflow-extratools.git
-2. cd gitflow-tools
+2. cd hubflow-extratools
 3. cp -a git* hubflow* &lt;Some path in our $PATH&gt;
 4. put your [github auth token](https://help.github.com/articles/creating-an-access-token-for-command-line-use) in git_flow_tools.conf file
 
