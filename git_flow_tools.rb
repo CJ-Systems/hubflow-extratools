@@ -113,7 +113,7 @@ when 'get_issue'
 
   issue = Git_flow_tools.get_issue(conf, repo_user, repo_name, ARGV[1])
   if issue['state'] == 'open'
-    puts issue['title']
+    puts issue['title'].gsub(/[^0-9A-Za-z]/, '_')
   else
     exit 1
   end
