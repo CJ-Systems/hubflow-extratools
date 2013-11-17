@@ -39,7 +39,7 @@ Good config of user.name and user.email in .gitconfig
 
 ##Installation
 
-1. Install [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/)
+1. Install https://github.com/datasift/gitflow
 2. git clone https://github.com/icalvete/hubflow-extratools.git
 3. cd hubflow-extratools
 4. cp -a git_flow_tools.rb git_flow_tools.conf git-hf-feature.patch to /usr/local/bin
