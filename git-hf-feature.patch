@@ -1,0 +1,46 @@
+--- git-hf-feature	2013-11-17 12:47:01.091858975 +0100
++++ git-hf-feature.sp	2013-11-17 12:49:43.007858954 +0100
+@@ -48,6 +48,7 @@
+ usage() {
+ 	echo "usage: git hf feature [list] [-v]"
+ 	echo "       git hf feature start <name> [<base>]"
++	echo "       git hf feature rstart <name> [<base>]"
+ 	echo "       git hf feature submit [<name>] [<base>]"
+ 	echo "       git hf feature finish [-rFkD] [<name|nameprefix>]"
+ 	echo "       git hf feature track <name>"
+@@ -410,6 +411,8 @@
+ 			git branch -d "$BRANCH"
+ 		fi
+ 	fi
++	issue_number=`echo $BRANCH | grep -Po '(\d+)-' | awk -F- '{print $1}'`
++	git_flow_tools.rb close_issue $issue_number
+ 
+ 	echo
+ 	echo "Summary of actions:"
+@@ -548,3 +551,26 @@
+ 	fi
+ 	echo
+ }
++
++cmd_rstart () {
++	echo
++	issues=`git_flow_tools.rb get_issues`
++	if [ $? -eq 1 ]; then
++		echo "No pending Issues. Good!!!"
++		exit
++	fi
++
++	echo -e $issues
++
++	echo "Choose an Issue"
++	read issue_number
++	issue_title=`git_flow_tools.rb get_issue $issue_number`
++	git_flow_tools.rb set_issue $issue_number
++
++	if [ $? -eq 0 ]; then
++		user=`git config --get user.email | awk -F@ '{print $1}'`
++		git hf feature start ${issue_number}-${issue_title}-${user}
++	else
++		echo "Issue closes or not found."
++	fi
++}

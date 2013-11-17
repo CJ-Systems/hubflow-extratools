@@ -5,7 +5,7 @@ Tools improving HubFlow
 "git hf" is a Git extension to provide high-level repository operations 
 for [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/), which is based on [Vincent Driessen’s original blog post](http://nvie.com/posts/a-successful-git-branching-model/).
 
-Fork of [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/). Original is too unstable to me.
+See [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/).
 
 ##Actions
 
@@ -39,10 +39,14 @@ Good config of user.name and user.email in .gitconfig
 
 ##Installation
 
-1. git clone https://github.com/icalvete/hubflow-extratools.git
-2. cd hubflow-extratools
-3. cp -a git* hubflow* &lt;Some path in our $PATH&gt;
-4. put your [github auth token](https://help.github.com/articles/creating-an-access-token-for-command-line-use) in git_flow_tools.conf file
+1. Install [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/)
+2. git clone https://github.com/icalvete/hubflow-extratools.git
+3. cd hubflow-extratools
+4. cp -a git_flow_tools.rb git_flow_tools.conf git-hf-feature.patch to /usr/local/bin
+5. cd /usr/local/bin && patch < git-hf-feature.patch
+6. put your [github auth token](https://help.github.com/articles/creating-an-access-token-for-command-line-use) in git_flow_tools.conf file
+
+**If [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/) fail, you can use aux tag. This tag contains a full release of this tool.**
 
 ##Getting Started with HubFlow
 
