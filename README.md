@@ -46,7 +46,7 @@ Good config of user.name and user.email in .gitconfig
 5. cd /usr/local/bin && patch < git-hf-feature.patch
 6. put your [github auth token](https://help.github.com/articles/creating-an-access-token-for-command-line-use) in git_flow_tools.conf file
 
-**If [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/) fail, you can use aux tag. This tag contains a full release of this tool.**
+**If [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/) fail, you can use aux tag. This tag contains a stable full release of this tool.**
 
 ##Getting Started with HubFlow
 
