@@ -24,9 +24,10 @@ def self.get_issues(conf, user, repo)
 
   path                = URI.escape("/repos/#{user}/#{repo}/issues")
   req                 = Net::HTTP::Get.new(path)
+  req['User-Agent']    = 'Awesome-Octocat-App'
   req['Content-Type'] = 'application/json'
   req['Accept']       = 'application/json'
-  
+
   begin
     Timeout::timeout(30) { JSON.parse http.request(req).body }
   rescue Exception => e
@@ -42,6 +43,7 @@ def self.get_issue(conf, user, repo, number)
 
   path                = URI.escape("/repos/#{user}/#{repo}/issues/#{number}")
   req                 = Net::HTTP::Get.new(path)
+  req['User-Agent']    = 'Awesome-Octocat-App'
   req['Content-Type'] = 'application/json'
   req['Accept']       = 'application/json'
   
@@ -62,6 +64,7 @@ def self.edit_issue(conf, user, repo, number, data)
 
   path                 = URI.escape("/repos/#{user}/#{repo}/issues/#{number}")
   req                  = Net::HTTP::Patch.new(path)
+  req['User-Agent']     = 'Awesome-Octocat-App'
   req['Content-Type']  = 'application/json'
   req['Accept']        = 'application/json'
   req['Authorization'] = "token #{git_hub_auth_token}"
