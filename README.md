@@ -19,7 +19,7 @@ See [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/).
 
 Good config of user.name and user.email in .gitconfig
 
-```
+```bash
 [user]
         name = Israel Calvete
         email = icalvete@gmail.com
@@ -39,12 +39,15 @@ Good config of user.name and user.email in .gitconfig
 
 ##Installation
 
-1. Install https://github.com/datasift/gitflow
-2. git clone https://github.com/icalvete/hubflow-extratools.git
-3. cd hubflow-extratools
-4. cp -a git_flow_tools.rb git_flow_tools.conf git-hf-feature.patch to /usr/local/bin
-5. cd /usr/local/bin && patch < git-hf-feature.patch
-6. put your [github auth token](https://help.github.com/articles/creating-an-access-token-for-command-line-use) in git_flow_tools.conf file
+* Install https://github.com/datasift/gitflow
+* Install this tool.
+```bash
+ubuntu@yoda:~$ git clone https://github.com/icalvete/hubflow-extratools.git
+ubuntu@yoda:~$ cd hubflow-extratools
+ubuntu@yoda:~$ cp -a git_flow_tools.rb git_flow_tools.conf git-hf-feature.patch to /usr/local/bin
+ubuntu@yoda:~$ cd /usr/local/bin && patch < git-hf-feature.patch
+```
+* Configure this tool putting your [github auth token](https://help.github.com/articles/creating-an-access-token-for-command-line-use) in git_flow_tools.conf file
 
 **If [DataSift's HubFlow branching model](http://datasift.github.com/gitflow/) fail, you can use aux tag. This tag contains a stable full release of this tool.**
 
